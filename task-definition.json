@@ -2,10 +2,8 @@
     "family": "circleci-demo-service",
     "containerDefinitions": [
         {
-            "name": "circleci-demo-service",
-            "image": "634223907656.dkr.ecr.eu-west-2.amazonaws.com/circleci-demo:latest",
-            "cpu": 128,
-            "memoryReservation": 128,
+            "name": "circleci-demo-service-1",
+            "image": "472427360972.dkr.ecr.us-east-1.amazonaws.com/circleci-demo:latest",
             "portMappings": [
                 {
                     "containerPort": 8080,
@@ -17,5 +15,12 @@
             ],
             "essential": true
         }
+    ],
+   "executionRoleArn": "arn:aws:iam::472427360972:role/Admin-Ec2",
+   "cpu": "256",
+   "memory": "512",
+   "networkMode": "awsvpc",
+   "requiresCompatibilities": [ 
+       "FARGATE" 
     ]
 }
